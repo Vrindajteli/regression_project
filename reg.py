@@ -15,8 +15,8 @@ st.write("Enter the details of the house in the sidebar to get an estimated pric
 @st.cache_resource
 def load_data_and_train_model():
 
-    # Load dataset (change path if needed)
-    df = pd.read_csv(r"D:\TOPS_DS\house_price_regression_dataset.csv")
+    # Load dataset
+    df = pd.read_csv("house_price_regression_dataset.csv")
 
     # Features and Target
     X = df.drop('House_Price', axis=1)
@@ -109,3 +109,4 @@ if predict_button:
 
     st.subheader("Predicted House Price")
     st.success(f"Estimated Price: **${predicted_price:,.2f}**")
+
